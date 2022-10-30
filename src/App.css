@@ -1,38 +1,136 @@
 .App {
+  font-family: sans-serif;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.all-info {
+  display: block;
+  margin: 0 auto;
+  max-width: 850px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.info {
+  display: block;
+  margin: 0 auto;
+  max-width: 850px;
+  border: 30px solid rgba(165, 211, 235, 0.5);
+  border-radius: 20px;
+  padding: 20px;
+  background-color: rgba(251, 248, 204, 0.3);
+  font-family: "Arima", cursive;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+h1,
+h2,
+h3 {
+  text-align: center;
+  color: #3ca9ee;
+  text-shadow: 1px 1px 2px #a5d3eb;
+  padding: 10px 20px;
 }
 
-.App-link {
-  color: #61dafb;
+h3 {
+  margin: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a {
+  color: #3ca9ee;
+  text-decoration: none;
+}
+
+#units {
+  font-size: 17px;
+  position: relative;
+  top: -15px;
+}
+
+#units .active {
+  color: black;
+  text-decoration: none;
+}
+
+#units .active:hover {
+  text-decoration: none;
+}
+
+.search {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+
+input {
+  background-color: rgba(251, 248, 204, 0.7);
+  border: 0.1px solid #a5d3eb;
+  width: 45%;
+  transition: all 200ms ease-in-out;
+}
+
+input:hover {
+  cursor: pointer;
+  border: 2px solid #a5d3eb;
+  background-color: rgba(251, 248, 204, 0.1);
+}
+
+button {
+  display: inline;
+  padding: 1px 30px;
+  border: 0.1px solid #a5d3eb;
+  background-color: rgba(251, 248, 204, 0.7);
+  transition: all 200ms ease-in-out;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgba(251, 248, 204, 0.1);
+  border: 2px solid #a5d3eb;
+}
+
+#weatherDescription {
+  text-transform: capitalize;
+}
+
+#weather-icon {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70px;
+}
+
+.daily {
+  line-height: 17px;
+  font-size: 21px;
+  margin: 0px 15px 20px 15px;
+  padding: 15px 0;
+}
+
+.card {
+  transition: all 200ms ease-in-out;
+  border: 0.1px solid #3ca9ee;
+  border-radius: 30%;
+  margin: 5px;
+}
+
+.card:hover {
+  background-color: rgba(251, 248, 204, 0.7);
+  cursor: pointer;
+}
+
+.future-forecast {
+  text-align: center;
+}
+
+h5.future-date-card {
+  margin-top: 7px;
+  margin-bottom: 0;
+  color: #3ca9ee;
+}
+
+img#future-weather-icon {
+  display: block;
+  margin: 0 auto;
+}
+
+span.future-degree-min {
+  opacity: 0.8;
 }
