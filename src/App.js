@@ -61,7 +61,7 @@ export default function App() {
         </div>
         <p>
           Coded by Milana Zadorozhna -
-          <a href="https://github.com/milanaz1/my-weather-project/tree/main/src">
+          <a href="https://github.com/milanaz1/weather-react" target="_blank" rel="noreferrer">
             GitHub
           </a>
         </p>
