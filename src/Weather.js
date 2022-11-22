@@ -9,6 +9,7 @@ export default function Weather(props) {
         console.log(response.data);
         setWeatherData({
             ready: true,
+            coordinates: response.data.coord,
             temperature: Math.round(response.data.main.temp),
             icon: response.data.weather[0].icon,
             date: new Date(response.data.dt * 1000),
