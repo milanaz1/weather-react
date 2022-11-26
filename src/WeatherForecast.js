@@ -15,9 +15,11 @@ export default function WeatherForecast(props) {
     if (loaded) {
         return (
             <div>
+                <div className="future-forecast" id="card-body-forecast">
                 <div className="col">
                 <h3 className="colName">Weekly weather</h3>
                 <WeatherForecastDay data={forecast[0]} />
+                </div>
             </div>
             </div>
         );
