@@ -6,6 +6,7 @@ import axios from 'axios';
 export default function WeatherForecast(props) {
     let [loaded, setLoaded] = useState(false);
     let [forecast, setForecast] = useState(null);
+    
     function handleResponse(response) {
         setForecast(response.data.daily);
         setLoaded(true);
@@ -16,11 +17,10 @@ export default function WeatherForecast(props) {
             <div>
                 <div className="col">
                 <h3 className="colName">Weekly weather</h3>
-                <div className="future-forecast" id="card-body-forecast"></div>
                 <WeatherForecastDay data={forecast[0]} />
             </div>
             </div>
-        )
+        );
     }
     else {
         let apiKey = `9b71ae985af1baa6a806c916c0a028f9`;
