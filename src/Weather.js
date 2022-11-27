@@ -6,7 +6,6 @@ export default function Weather(props) {
     const [weatherData, setWeatherData] = useState({ ready: false });
     const [city, setCity] = useState(props.city);
     function handleResponse(response) {
-        console.log(response.data);
         setWeatherData({
             ready: true,
             coordinates: response.data.coord,
@@ -43,12 +42,13 @@ function handleCityChange(event) {
               <div className="search">
                 <form onSubmit={handleSubmit} className="city-form">
                   <input
+                    className="m-1 rounded"
                     id="search-text"
                     type="text"
                     placeholder="Choose the city"
                     onChange={handleCityChange}
                   />
-                  <input type="submit" id="submit-button" />
+                  <input type="submit" id="submit-button" className="m-1 rounded"/>
                 </form>
               </div>
               <WeatherInfo data={weatherData}/>
@@ -65,60 +65,4 @@ function handleCityChange(event) {
         search();
         return "Loading..";
     }
-
-}
-
-
-
-           {/* <div className="all-info">
-            <div className="info">
-              <h1>
-                <span id="city-now"> {weatherData.city} </span>
-                <span id="degrees"> {weatherData.temperature} </span>{" "}
-                <span id="units">
-                  {" "}
-                  <a href="/" id="celsius" className="active">
-                    °C
-                  </a>{" "}
-                  |{" "}
-                  <a href="/" id="fahrenheit">
-                    °F
-                  </a>
-                </span>
-              </h1>
-              <p className="text-capitalize"> {weatherData.description} </p>
-              <div>
-                Last updated: <FormattedDate date={ weatherData.date }/>
-              </div>
-              
-*/}
-                           {/*  
-              <div className="container">
-                <div className="row cols">
-                  <div className="col">
-                    <h3 className="colName">Daily weather</h3>
-                    <img
-                      src={weatherData.imgUrl}
-                      alt={weatherData.description}
-                      id="weather-icon"
-                    />
-                    <div className="daily">
-                      <p id="weatherDescription"></p>
-                      <hr />
-                      <p>
-                        Wind speed: <span id="windSpeed">{weatherData.wind}</span>km/h
-                      </p>
-                      <p>
-                        Humidity: <span id="humidity">{weatherData.humidity}</span>%
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col">
-                    <h3 className="colName">Weekly weather</h3>
-                    <div className="future-forecast" id="card-body-forecast"></div>
-                    
-                  </div>
-                </div>
-              </div>
-            </div>
-        */}
+  }
